@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'STATUSFONT';
+    src: url(font/NeueMontreal-Regular.otf);
+}
+@font-face {
+    font-family: 'STATUSFONTs';
+    src: url(font/NeueMontreal-Bold.otf);
+}
+@font-face {
+    font-family: 'STATUSFONTTs';
+    src: url(fonts/BeatriceDeckTRIAL-Bold-BF64829e8e9ca08.otf);
+}
+* {
+    font-family: "STATUSFONT";
+}
+.wr {
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    background: #d5d3d3;
+    box-shadow: inherit;
+    padding: 10px;
+    border-radius: 15px;
+    min-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    margin: auto auto 30px;
+    z-index: 0;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, .253);
+    gap: 300px;
+    font-size: 25px;
+}
+.big-wr {
+    justify-content: center; 
+    display: grid; 
+    gap: 16px;
+}
+p {
+    font-family: "STATUSFONTs";
+}
+.NaNpa {
+    font-family: 'STATUSFONTTs';
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 344px) {
+    .wr {
+        gap: 150px;
+        font-size: 20px;
+    }
+}
+@media (min-width: 412px) {
+    .wr {
+        gap: 200px;
+        font-size: 25px;
+    }
+}
+@media (min-width: 477px) {
+    .wr {
+        gap: 250px;
+    }
+}
+@media (min-width: 510px) {
+    .wr {
+        gap: 300px;
+    }
+}
