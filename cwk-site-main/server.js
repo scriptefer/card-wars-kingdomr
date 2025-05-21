@@ -1,15 +1,17 @@
 const express = require('express');
 const fs = require('node:fs');
 const path = require('node:path');
-const readPublic = require('./PublicReadre');
-const axios = require('axios')
-const cheerio = require('cheerio')
+const axios = require('axios');
 const session = require('express-session');
+const readPublic = require('./PublicReadre');
+const cheerio = require('cheerio');
+
 const app = express();
 const apiFolder = path.join(__dirname, 'api');
-const publicFolder = path.join(__dirname, './public');
+const publicFolder = path.join(__dirname, 'public');
+const viewsFolder = publicFolder;
 
-// Add session support
+// Session Configuration
 app.use(session({
     secret: 'your-secret-key',
     resave: false,
@@ -20,119 +22,77 @@ app.use(session({
     }
 }));
 
-// Add body parser middleware
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(publicFolder));
 
-// إضافة دعم EJS
+// Set View Engine
 app.set('view engine', 'ejs');
-
-// إعداد مجلد views ليكون المجلد الذي يحتوي على ملفات EJS
-const viewsFolder = path.join(__dirname, './public');
 app.set('views', viewsFolder);
 
-app.use(express.static(publicFolder));
-module.exports = { express, app };
-
-// بث جميع الملفات داخل مجلد "public"
-
-// قراءة ملفات API وربطها بالتطبيق
-fs.readdir(apiFolder, (err, files) => {
-    if (err) {
-        console.error('Unable to scan directory:', err);
-        return;
-    }
-    
-    files.forEach(file => {
-        const routePath = `/api/${path.parse(file).name}`;
-        const filePath = path.join(apiFolder, file);
-
-        app.use(routePath, require(filePath));
-        console.log(`Loaded route: ${routePath}`);
-    });
-});
-
-// Add changelog routes
-const changelogRoutes = require('./api/changelog');
-app.use('/', changelogRoutes);
-
-// إضافة مسار لرندرة صفحة EJS
-app.get('/', async(req, res) => {
-    let response = await axios.get('https://cardwarskingdom.pythonanywhere.com/online_players', {
-        withCredentials: true,
-        headers: { 
-            'Content-Type': 'application/json',
-        }
-    });
-    let online = response.data
-    res.render('index',{
-        online
-    }); // تأكد من أن لديك ملف index.ejs في مجلد views
-});
-
-app.get('/status', async(req, res) => {
-    let response = await axios.get('https://cardwarskingdom.pythonanywhere.com/online_players', {
-        withCredentials: true,
-        headers: { 
-            'Content-Type': 'application/json',
-        }
-    });
-    let online = response.data
-    
-    res.render('status',{
-        online
-    }); // تأكد من أن لديك ملف index.ejs في مجلد views
-});
-
-console.log(readPublic(publicFolder, '/public', app));
-
+// Skip Ngrok warning
 app.use((req, res, next) => {
     res.setHeader('ngrok-skip-browser-warning', '1');
     next();
 });
 
-// تشغيل الخادم على المنفذ 5000
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+// Load API Routes from /api
+fs.readdir(apiFolder, (err, files) => {
+    if (err) return console.error('Error reading API folder:', err);
+
+    files.forEach(file => {
+        const routePath = `/api/${path.parse(file).name}`;
+        const route = require(path.join(apiFolder, file));
+        app.use(routePath, route);
+        console.log(`Loaded route: ${routePath}`);
+    });
 });
 
-app.get('/download', async(req, res) => {
-    let response = await axios.get('https://cardwarskingdom.pythonanywhere.com/online_players', {
+// Load and render routes
+const fetchOnlinePlayers = async () => {
+    const response = await axios.get('https://cardwarskingdom.pythonanywhere.com/online_players', {
         withCredentials: true,
-        headers: { 
-            'Content-Type': 'application/json',
-        }
+        headers: { 'Content-Type': 'application/json' }
     });
-    let online = response.data
-    
-    // Read downloads data
-    const downloadsPath = path.join(__dirname, 'public/data/downloads.json');
-    let downloads = {};
-    if (fs.existsSync(downloadsPath)) {
-        downloads = JSON.parse(fs.readFileSync(downloadsPath));
-    }
-    
-    res.render('download', {
-        online,
-        downloads
-    });
+    return response.data;
+};
+
+app.get('/', async (req, res) => {
+    const online = await fetchOnlinePlayers();
+    res.render('index', { online });
+});
+
+app.get('/status', async (req, res) => {
+    const online = await fetchOnlinePlayers();
+    res.render('status', { online });
+});
+
+app.get('/download', async (req, res) => {
+    const online = await fetchOnlinePlayers();
+
+    const downloadsPath = path.join(publicFolder, 'data', 'downloads.json');
+    const downloads = fs.existsSync(downloadsPath)
+        ? JSON.parse(fs.readFileSync(downloadsPath, 'utf-8'))
+        : {};
+
+    res.render('download', { online, downloads });
 });
 
 app.get('/cards', (req, res) => {
-    res.render('cards'); 
+    res.render('cards');
 });
 
-// Changelog route
 app.get('/changelog', (req, res) => {
-    const changelogPath = path.join(__dirname, 'public/data/changelog.json');
-    let changelog = [];
-    if (fs.existsSync(changelogPath)) {
-        changelog = JSON.parse(fs.readFileSync(changelogPath));
-    }
+    const changelogPath = path.join(publicFolder, 'data', 'changelog.json');
+    const changelog = fs.existsSync(changelogPath)
+        ? JSON.parse(fs.readFileSync(changelogPath, 'utf-8'))
+        : [];
+
     res.render('changelog', { changelog });
 });
 
-// Admin authentication middleware
+// Admin Authentication Middleware
 const requireAuth = (req, res, next) => {
     if (req.session && req.session.isAuthenticated) {
         next();
@@ -141,38 +101,53 @@ const requireAuth = (req, res, next) => {
     }
 };
 
-// Admin login route
+// Admin Auth Routes
 app.post('/admin/login', (req, res) => {
     const { username, password } = req.body;
-    
-    // Temporary hardcoded credentials
-    if (username === 'admin' && password === "Z#4tQ^9mW!vR6$Yp@n2Lc*XbE") {
+    const validUsername = 'admin';
+    const validPassword = 'Z#4tQ^9mW!vR6$Yp@n2Lc*XbE';
+
+    if (username === validUsername && password === validPassword) {
         req.session.isAuthenticated = true;
-            res.redirect('/admin/dashboard');
-    } else {
-        res.json({ success: false, error: 'Invalid credentials' });
+        return res.redirect('/admin/dashboard');
     }
+
+    res.json({ success: false, error: 'Invalid credentials' });
 });
 
-// Admin logout route
 app.get('/admin/logout', (req, res) => {
     req.session.destroy();
     res.redirect('/admin/login');
 });
 
-// Admin dashboard route
+// Admin Views
 app.get('/admin/dashboard', requireAuth, (req, res) => {
     res.render('admin/dashboard');
 });
 
-// Admin changelog management route
 app.get('/admin/changelog-management', requireAuth, (req, res) => {
     res.render('admin/changelog-management');
 });
 
-// Protected admin routes
+// Protected Admin Routes
 app.use('/admin/changelog', requireAuth);
 app.use('/admin/update-downloads', requireAuth);
 
-// Admin routes
+// Load Admin API
 app.use('/admin', require('./api/admin'));
+
+// Load Changelog API
+const changelogRoutes = require('./api/changelog');
+app.use('/', changelogRoutes);
+
+// Render all public files (custom module)
+console.log(readPublic(publicFolder, '/public', app));
+
+// Start Server
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+// Export for external use
+module.exports = { express, app };
