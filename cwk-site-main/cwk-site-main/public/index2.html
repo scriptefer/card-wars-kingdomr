@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="loading.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Card Wars Kingdom</title>
+    <link rel="shortcut icon" href="https://i.postimg.cc/522JrMVz/AT-Card-Wars2-Logo-Eng-1.png"/>
+
+    <!--Fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--CardsKingdome-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Rubik+Bubbles&family=Rubik+Glitch&family=Rubik+Mono+One&family=Rubik+Scribble&display=swap" rel="stylesheet">
+<!---->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
+<!---->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+<!--Play-->
+<link href="https://db.onlinewebfonts.com/c/f71277d823fc51b3aec6b4ce0ad76286?family=Core+Sans+E+W01+55+Medium" rel="stylesheet">
+<!--/Fonts-->
+    <!--icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--icons-->
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <!--/Jquery-->
+    <!--Tailwin-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Tailwin-->
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Boostrap-->
+</head>
+<body style="background-color: black;">
+    <div class="center-div">
+        <img class="imgone" src="https://i.postimg.cc/522JrMVz/AT-Card-Wars2-Logo-Eng-1.png" alt="Card Wars Kingdom Logo">
+        <div class="invisibol-div"></div>
+    </div>
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" id="span-open-close" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center" href="index.html" >
+                <img class="h-8 w-auto" src="https://i.postimg.cc/rmFcXggw/Main-Logo.webp" alt="Your Company">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">News</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">museum</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Support</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Status</a>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              <button id="dnwl-button" class="btn btn-primary" type="submit">
+                <span class="material-symbols-outlined">
+                  download
+                </span>
+                Download
+              </button>
+      
+              <!-- Profile dropdown -->
+              <div class="relative ml-3" id="forrespens"></div>
+              <div class="bor-style"></div>
+                <div id="user-menu-button">
+                  <p class="NaNpa"><span>NAN</span> people are online now</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Download</a>
+          </div>
+        </div>
+      </nav>
+      <section class="vs-section">
+        <div class="for-video-by-centre">
+            <video class="the-home-video" autoplay muted loop src="Card Wars Kingdom  Adventure Time  Cartoon Network Asia.mp4" style="max-width: 300%;"></video>
+            <div class="for-video-text">
+                <p>A Cards game for Adventure Time</p>
+                <h1 class="logo-big">Card Wars Kingdom</h1>
+                <div class="marg">
+                  <a class="Download-bigOne" href="Download">PLAY IT NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+      <div class="div-just-for-flex">
+        <div class="bunk">
+          <h1>
+            WELCOME TO ADVENTURE TIME:<span class="CWK">CARD WARS</span> <span class="K">KINGDOM!</span>
+            <p>
+              <span class="weight">Dive into the fantastical world</span> of Adventure Time with Card Wars Kingdom, where you can battle your way to the top as a champion of the Card Wars! Join your favorite characters from the Land of Ooo in this epic card game, filled with strategic battles, powerful creatures, and exciting adventures.
+
+              Build your ultimate deck, summon unique creatures, and challenge players worldwide in this thrilling, fast-paced card battler. Master your strategy, discover powerful combos, and unleash devastating moves to crush your opponents. Whether you’re battling in epic PvP duels or embarking on quests with Finn, Jake, and other iconic heroes, there’s always an adventure waiting.
+
+              Are you ready to become the ultimate Card Wars champion? Let the battles begin
+            </p>
+          </h1>
+        </div>
+        <div class="video-div">
+          <video class="the-trailer-video" autoplay muted loop src="Card Wars Kingdom (Available Now!)  Adventure Time  Cartoon Network Asia.mp4" style="max-width: 200%;"></video>
+          <div class="map-flex" id="mapflex">
+            <img src="jesus-alejandro-borjas-padilla-gameboard-icekingdom-removebg-preview.png"/>
+            <img src="jesus-alejandro-borjas-padilla-gameboard-candykingdom2-removebg-preview.png"/>
+          </div>
+          <div class="map-flex">
+            <img src="jesus-alejandro-borjas-padilla-gameboard-candykingdom-removebg-preview.png"/>
+            <img src="jesus-alejandro-borjas-padilla-gameboard-badlands-removebg-preview.png"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Caracters-Info">
+      <div class="forflex">
+        <div class="Heros-infos-mini">
+          <h1 class="heros-your">YOUR <p>HEROES</p></h1>
+          <h1 class="heros-title">IMAGINATION IS YOUR STRONGEST SPELL.</h1>
+          <p>In Card Wars Kingdom, you’ll summon an army of powerful creatures, each with unique abilities and skills that give you the edge in battle. From fiery spells to strategic gameplay, your heroes wield an array of magic that no other deck can match. No two creatures fight alike, and no two battles ever play out the same way.</p>
+          <a class="AEGNTS-LINK" href="Agents.html">VIEW ALL AGENTS</a>
+        </div>
+        <div>
+          <img class="Main-character" src="pngegg.png"/>
+        </div>
+        <div class="Heros-infos">
+          <h1 class="heros-your">YOUR <p>HEROES</p></h1>
+          <h1 class="heros-title">IMAGINATION IS YOUR STRONGEST SPELL.</h1>
+          <p>In Card Wars Kingdom, you’ll summon an army of powerful creatures, each with unique abilities and skills that give you the edge in battle. From fiery spells to strategic gameplay, your heroes wield an array of magic that no other deck can match. No two creatures fight alike, and no two battles ever play out the same way.</p>
+          <a class="AEGNTS-LINK" href="Agents.html">VIEW ALL AGENTS</a>
+        </div>
+      </div>
+    </section>
+    <section class="Maps-Info">
+      <div class="forflex">
+        <div class="Heros-infos" id="Maps-infos">
+          <h1 class="heros-your">YOUR MAPS</h1>
+          <h1 class="heros-title">FIGHT AROUND THE ADVEUNTUE TIME WORLDS</h1>
+          <p>Embark on a thrilling journey through the Adventure Time universe in Card Wars Kingdom! Battle your way through iconic locations like the Grasslands, Ice Kingdom, and the Fire Kingdom. Assemble your team of powerful creatures, unleash magical spells, and take on epic challenges across diverse maps. Discover hidden secrets, collect rare cards, and conquer every battlefield in your quest to become the ultimate Card Wars champion!</p>
+          <a class="MAPS-LINK" href="MAPS.html">VIEW ALL AGENTS</a>
+        </div>
+      <div>
+        <img id="Main-Map" class="Main-character" style="border-radius: solid 2px red;" src="09_LD_AD_ConceptArt_06_AdventureTimeHub_DL-_1_-removebg-preview (1).png"/>
+      </div>
+    </div>
+  </section>
+  <section class="game-info">
+    <div class="forgrid">
+        <h1 class="GETYOUR">Get your</h1>
+        <h1 class="INFOT-TITLE">Game and rest assured</h1>
+        <p>Our game is open source, meaning anyone can access, review, and contribute to its code. This transparency ensures that the software is secure and free from hidden threats. By allowing the community to inspect and improve the code, we enhance its safety and reliability for all users.</p>
+      <a class="GITHUB-LINK" href="Agents.html">VIEW SOURCE CODE</a>
+    </div>
+  </section>
+  <section class="discord-section">
+    <div class="flex-1-2-3">
+      <a class="flex-1-2-3-4" href="https://discord.gg/card-wars-kingdom-revived-1227932764117143642">
+        <h1>Join our community on </h1>
+        <img src="images/66a7bc830400f-removebg-preview.png" alt="Card Wars kigdome server dicord community">
+      </a>
+    </div>
+  </section>
+  <section class="foter">
+    <div class="forgrid">
+      <img class="icon-image" src="images/card-wars-kingdom-icon.png">
+      <h5>@2024 Card Wars Kingdome</h5>
+      <div class="flex-2-1">
+        <h1>FREE DOWNLOAND</h1>
+        <h1>DISCORD SERVER</h1>
+        <h1>STATUS PAGE</h1>
+      </div>
+      <div class="flex-2-2-1">
+        <img src="https://cncdn.dmti.cloud/fc30b687ad0de11f97efcb0a14dae5a09a4ad7f8/static/media/cn-logo.7f0ade13.svg">
+        <img src="https://cncdn.dmti.cloud/fc30b687ad0de11f97efcb0a14dae5a09a4ad7f8/static/media/wbd-logo-white.5ff10580.svg">
+      </div>
+      <h5 class="not-us">By using this site, you acknowledge that Cartoon Network™ and © own all rights. We do not claim any ownership or financial benefit from it.</h5>
+    </div>
+  </section>
+    </section>
+    <script src="loading.js"></script>
+</body>
+</html>

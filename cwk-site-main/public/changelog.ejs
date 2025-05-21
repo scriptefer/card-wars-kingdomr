@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - Card Wars Kingdom</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body {
+            background: #f8fafc;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .changelog-container {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        .version-entry {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .version-entry:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .version-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+        .version-date {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        .changes-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin: 0;
+        }
+        .change-item {
+            margin-bottom: 0.5rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+        }
+        .change-item:last-child {
+            margin-bottom: 0;
+        }
+        .change-item::before {
+            content: '•';
+            color: #3498db;
+            display: inline-block;
+            margin-right: 0.75rem;
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+
+        /* Improved Badge Styling */
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            color: white;
+        }
+
+        .badge-new {
+            background: #2ecc71;
+        }
+
+        .badge-fix {
+            background: #e74c3c;
+        }
+
+        .badge-improvement {
+            background: #3498db;
+        }
+
+        .badge-feature {
+            background: #9b59b6;
+        }
+
+        .badge-update {
+            background: #f1c40f;
+            color: #2c3e50;
+        }
+
+        .badge-balance {
+            background: #ec4899;
+        }
+
+        .badge-bug {
+            background: #dc2626;
+        }
+
+        .badge-content {
+            background: #10b981;
+        }
+
+        .badge-performance {
+            background: #8b5cf6;
+        }
+
+        .badge-security {
+            background: #f97316;
+        }
+
+        .badge-ui {
+            background: #06b6d4;
+        }
+
+        .badge-ux {
+            background: #0ea5e9;
+        }
+
+        .badge-other {
+            background: #9ca3af;
+        }
+
+        .search-container {
+            position: relative;
+            width: 300px;
+        }
+        .search-input {
+            width: 100%;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            padding: 0 1rem 0 2.75rem;
+            color: white;
+            font-size: 0.875rem;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Inter', sans-serif;
+        }
+        .search-input:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .search-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            outline: none;
+        }
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+        .search-icon {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            font-size: 1.125rem;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .search-input:hover + .search-icon {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .search-input:focus + .search-icon {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        @media (max-width: 640px) {
+            .search-container {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+            .search-input {
+                height: 36px;
+            }
+        }
+        .download-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            height: 36px;
+        }
+        .download-button:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+        .download-button:active {
+            transform: translateY(0);
+        }
+        .download-button .material-symbols-outlined {
+            font-size: 1.125rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navbar -->
+    <nav id="TAMATBARASNI" class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8" id="divback" style="max-width: 100%;">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button" id="span-open-close" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center" href="index.html">
+                        <img class="h-8 w-auto" src="https://i.postimg.cc/rmFcXggw/Main-Logo.webp" alt="Your Company">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="https://discord.com/channels/1227932764117143642/1233733596544499731" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">News</a>
+                            <a href="/changelog" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Changelog</a>
+                            <a href="/cards" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Museum</a>
+                            <a href="https://discord.com/channels/1227932764117143642/1233733596544499731" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Support</a>
+                            <a href="/status" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Status</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <div class="search-container ml-3">
+                        <input type="text" 
+                               placeholder="Search changelog..." 
+                               class="search-input" 
+                               id="navbarSearch"
+                               spellcheck="false"
+                               autocomplete="off">
+                        <span class="material-symbols-outlined search-icon">search</span>
+                    </div>
+                    <a href="/download" class="download-button ml-4">
+                        <span class="material-symbols-outlined">download</span>
+                        Download
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                <a href="/download" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Download</a>
+                <a href="/changelog" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Changelog</a>
+                <a href="/status" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Status</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Change Log</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Track the evolution of Card Wars Kingdom and stay updated with our latest features, improvements, and fixes.</p>
+        </div>
+
+        <div class="changelog-container">
+            <% if (typeof changelog !== 'undefined' && changelog.length > 0) { %>
+                <% changelog.forEach(entry => { %>
+                    <div class="version-entry">
+                        <h3 class="version-title"><%= entry.version %></h3>
+                        <span class="version-date"><%= new Date(entry.date).toLocaleDateString() %></span>
+                        <% if (entry.changes && entry.changes.length > 0) { %>
+                            <ul class="changes-list">
+                                <% entry.changes.forEach(change => { %>
+                                    <li class="change-item">
+                                        <% 
+                                        const badges = [];
+                                        // Attempt to extract badges from change text (e.g., [NEW] Added feature)
+                                        const badgeMatch = change.match(/^\\[(.*?)\\]/);
+                                        if (badgeMatch && badgeMatch[1]) {
+                                            badges.push(badgeMatch[1].trim().toLowerCase());
+                                        }
+                                        
+                                        // Also check for badges associated with the entire entry (if applicable)
+                                        if (entry.badges) {
+                                            const entryBadges = Array.isArray(entry.badges) ? entry.badges : entry.badges.split(',').map(b => b.trim().toLowerCase());
+                                            entryBadges.forEach(b => {
+                                                // Avoid adding duplicate badges if already extracted from text
+                                                if (!badges.includes(b)) badges.push(b);
+                                            });
+                                        }
+                                        %>
+                                        <% if (badges.length > 0) { %>
+                                            <div class="badges-container">
+                                                <% badges.forEach(badge => { %>
+                                                    <span class="badge badge-<%= badge.replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '') %>"><%= badge %></span>
+                                                <% }); %>
+                                            </div>
+                                        <% } %>
+                                        <%= change.replace(/^\\[(.*?)\\]\s*/, '') %>
+                                    </li>
+                                <% }); %>
+                            </ul>
+                        <% } %>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <div class="text-center py-12">
+                    <div class="text-gray-500 text-lg">No version history available yet.</div>
+                    <p class="text-gray-400 mt-2">Check back soon for updates!</p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-500 text-sm">
+                <p>© 2025 Card Wars Kingdom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add search functionality
+        const searchInput = document.getElementById('navbarSearch');
+        const versionEntries = document.querySelectorAll('.version-entry');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            versionEntries.forEach(entry => {
+                const text = entry.textContent.toLowerCase();
+                entry.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+
+        // Remove focus ring on click
+        searchInput.addEventListener('focus', () => {
+            searchInput.style.outline = 'none';
+        });
+    </script>
+</body>
+</html> 

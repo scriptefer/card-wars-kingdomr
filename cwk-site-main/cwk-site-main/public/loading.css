@@ -1,0 +1,3244 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+@import url(https://db.onlinewebfonts.com/c/f71277d823fc51b3aec6b4ce0ad76286?family=Core+Sans+E+W01+55+Medium);
+@font-face {
+    font-family: 'PLAYITNOW';
+    src: url(/fonts/BeatriceDeckTRIAL-Bold-BF64829e916f5e9.ttf);
+}
+@font-face {
+    font-family: 'STATUSFONTTs';
+    src: url(/fonts/BeatriceDeckTRIAL-Bold-BF64829e8e9ca08.otf);
+}
+@font-face {
+    font-family: 'fordistext';
+    src: url(/DISCORDFONT/Mark-Bold.ttf);
+}
+@font-face {
+    font-family: "Core Sans E W01 55 Medium";
+    src: url("https://db.onlinewebfonts.com/t/f71277d823fc51b3aec6b4ce0ad76286.eot");
+    src: url("https://db.onlinewebfonts.com/t/f71277d823fc51b3aec6b4ce0ad76286.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f71277d823fc51b3aec6b4ce0ad76286.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f71277d823fc51b3aec6b4ce0ad76286.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/f71277d823fc51b3aec6b4ce0ad76286.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f71277d823fc51b3aec6b4ce0ad76286.svg#Core Sans E W01 55 Medium")format("svg");
+}
+@font-face {
+    font-family: "DownloadMe";
+    src: url(/downloadfont/Radiate\ Sans\ Extra\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: "DownloaddMe";
+    src: url(/downloadfont/Radiate\ Sans\ Bold\ Expanded.ttf);
+}
+@font-face {
+    font-family: "PLATFORMS";
+    src: url(/platformsfont/ElaineSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "DISCIVERFONT";
+    src: url(/DISCOVERFONT/HeadingNowTrial-56Bold.ttf);
+}
+#background-img- {
+    background-color: #f0ece4;
+}
+h1 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+img {
+    width: 30%;
+}
+.move {
+    width: 35%;
+    transition: 2s;
+}
+.invisibol-div {
+    background-color: black;
+    display: inline;
+    width: 50%;
+    height: 35%;
+    position: absolute;
+    bottom: 80%;
+    animation-name: topp;
+    animation-duration: 3s;
+}
+.bg-gray-800 {
+    display: none;
+    z-index: 999;
+    position: relative;
+}
+.vs-section {
+    display: none;
+}
+#forrespens {
+    margin-right: 2rem;
+    border-radius: 50%;
+    min-width: 36px;
+    min-height: 36px;
+    background-color: #22c35e;
+    position: relative;
+}
+.bor-style:hover {
+    cursor: pointer;
+}
+#user-menu-button {
+    position: absolute;
+    margin-top: 10%;
+    background-color: #000000;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 6%;
+}
+#user-menu-button span {
+    color: green;
+    font-family: 'STATUSFONTTs';
+    margin-right: 1px;
+}
+.bor-style {
+    border-radius: 9999px;
+    position: relative;
+    min-width: 36px;
+    margin-left: -4.2rem;
+    min-height: 36px;
+    background-color: #68D391;
+    animation: 2s ease 0s infinite normal none running mawazine;
+}
+@keyframes mawazine {
+    0% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 0;
+        transform: scale(1.6);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.NaNpa {
+    font-family: 'STATUSFONTTs';
+    display: flex;
+    justify-content: center;
+}
+@keyframes topp {
+    0% {bottom: 40%;}
+    25% {bottom: 45%;}
+    75% {bottom: 52%;}
+    100% {bottom: 80%;}
+}
+#dnwl-button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(99 102 241);
+    border: none;
+    font-size: 0.875rem;
+    color: rgb(255 255 255);
+}
+#user-menu-button {
+    display: none;
+}
+#mobile-menu {
+    display: none;
+}
+.the-home-video {
+    max-width: auto;
+    opacity: 0.7;
+    background-color: rgb(15, 25, 35);
+}
+.logo-big {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}
+.vs-section {
+    position: relative;
+}
+
+.for-video-by-centre {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+.for-video-text {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-align: center; 
+    z-index: 1; 
+    display: inline-grid;
+    gap: 16px;
+}
+.for-video-text p {
+    font-family: "Core Sans E W01 55 Medium";
+}
+.for-video-text p,
+.for-video-text h1 {
+    margin: 0; 
+}
+.for-video-text {
+    font-size: 18px;
+}
+.Download-bigOne {
+    padding: 13px 34px;
+    background-color: rgb(99 102 241);
+    outline: rgb(236, 232, 225) solid 1px;
+    outline-offset: 3px;
+    font-size: 18px;
+    color: #ECE8E1;
+    text-align: center;
+    transition: 0.5s;
+    font-family: "Core Sans E W01 55 Medium";
+}
+.Download-bigOne:hover {
+    color: rgb(99 102 241);
+    background-color:#ECE8E1;
+}
+.marg {
+    margin-top: 16px;
+}
+.info {
+    display: none;
+    background-color: white;
+    background-image: url(https://i.postimg.cc/J0TRZ6md/Design-sans-titre1.png);
+    padding: 48px;
+}
+.div-just-for-flex {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between; 
+    /*align-items: center;*/
+}
+.bunk {
+    max-width: 60%; 
+}
+.bunk h1 {
+    margin-bottom: 16px;
+    font-size: 100px;
+    line-height: 100px;
+    font-family: "Core Sans E W01 55 Medium";
+}
+.bunk p {
+    font-size: 18px;
+    line-height: 28px;
+}
+.video-div {
+    max-width: 40%; 
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.the-trailer-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.CWK {
+    font-size: 70px;
+}
+.weight {
+    font-weight: 700;
+}
+.map-flex {
+    display: flex;
+    justify-content: center;
+}
+#mapflex {
+    margin-top: 160px;
+}
+.map-flex img {
+    animation: up-and-down 5s linear infinite;
+}
+.Caracters-Info {
+    display: none;
+    padding: 48px;
+    background-color: rgb(99 102 241);
+}
+.forflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Main-character {
+    width: 100%;
+    min-height: 100%;
+}
+.Heros-infos {
+    max-width: 50%;
+    display: inline-grid;
+    gap: 16px;
+}
+.Heros-infos h1, p {
+    font-family: "Core Sans E W01 55 Medium";
+}
+.heros-your {
+    font-size: 100px;
+    line-height: 100px;
+    font-family: "Core Sans E W01 55 Medium";
+}
+.heros-title {
+    font-size: 18px;
+    font-family: "Core Sans E W01 55 Medium";
+    font-weight: 700;
+}
+.AEGNTS-LINK {
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #ECE8E1;
+    background-color: #0F1923;
+    transition: 0.5s;
+    font-family: "Core Sans E W01 55 Medium";
+}
+.AEGNTS-LINK:hover {
+    color: rgb(99 102 241);
+    background-color: #ECE8E1;
+}
+.Heros-infos-mini {
+    display: none;
+}
+.Maps-Info {
+    display: none;
+    padding: 48px;
+    background-color: #ECE8E1;
+    background-image: url(ADVENTURE.png);
+}
+.MAPS-LINK {
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #ECE8E1;
+    background-color: rgb(99 102 241);
+    transition: 0.5s;
+    font-family: "Core Sans E W01 55 Medium";
+}
+.MAPS-LINK:hover {
+    color: #ECE8E1;
+    background-color: #0F1923;
+}
+#Maps-infos {
+    margin-right: 10%;
+}
+#Main-Map {
+    border: solid 5px rgb(99 102 241);
+    border-radius: 50%;
+}
+@keyframes up-and-down {
+    50% {
+        transform: translateY(10px);
+    }
+}
+.forfflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-info {
+    display: none;
+    background: url(images/) no-repeat center center;
+    background-position: bottom;
+    padding: 170px;
+    position: relative;
+    background-image: url(images/bananas-on-ship-adventure-time-laptop-uycuy4vcstai494q.jpg);
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.forgrid {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    font-family: 'PLAYITNOW';
+    color: white;
+    z-index: 1;
+}
+.GETYOUR {
+    font-size: 22px;
+}
+.INFOT-TITLE {
+    font-size: 40px;
+}
+.forgrid p {
+    font-size: 18px;
+}
+.GITHUB-LINK {
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #ECE8E1;
+    background-color: rgb(99 102 241);
+    transition: 0.5s;
+    font-family: "Core Sans E W01 55 Medium";
+    margin-top: 48px;
+}
+.GITHUB-LINK:hover {
+    color: #FFFEF9;
+    background-color: rgb(74, 76, 204);
+}
+.discord-section {
+    display: none;
+    background-color: #292929;
+    font-family: 'fordistext';
+    padding: 24px;
+}
+.flex-1-2-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-1-2-3-4 {
+    display: flex;
+    width: max-content;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.flex-1-2-3-4:hover {
+    background-color: rgba(128, 128, 128, .3);
+    color: white;
+}
+.flex-1-2-3-4 img {
+    max-width: 80px;
+}
+.foter {
+    display: none;
+    background-color: #111;
+    padding: 25px;
+}
+.icon-image {
+    max-width: 60px;
+    cursor: pointer;
+}
+.not-us{
+    font-size: 10px;
+}
+.flex-2-1 h1 {
+    cursor: pointer;
+}
+#divback {
+    background-color: #101014;
+}
+.Main-download {
+    display: block;
+    background-image: url(images/unnamed.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 70px;
+    padding-top: 400px;
+    padding-bottom: 112px;
+    font-family: DownloadMe;
+    color: white;
+    display: grid;
+    gap: 20px;
+}
+.Main-download p {
+    font-family: DownloadMe;
+}
+.Download-All-INOne {
+    background-image: linear-gradient(to right, #1e171e 10%, #423732);
+    border-radius: 10px;
+    padding: 20px;
+}
+.GAMEDOWNLOAD-TITLE {
+    font-size: 2.5rem;
+}
+.GAMEDOWNLOAD-SUBTITLE {
+    font-size: 1.2rem;
+}
+.gpaerfixer {
+    display: flex;
+    gap: 14rem;
+}
+.flexer {
+    display: block;
+    padding-top: 15px;
+}
+.griding {
+    display: grid;
+    gap: 10px;
+}
+.flexer-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.Tuning {
+    display: grid;
+    justify-items: left;
+}
+.download-text-1 {
+    font-size: 1.1875rem;
+}
+.version-text {
+    font-size: .6875rem;
+}
+.car-1-img img {
+    width: 40px;
+    height: 40px;
+}
+.final-button {
+    background-color: #efd5bb;
+    padding: 20px;
+    border-radius: 1rem;
+    color: #000;
+    transition: 0.2s;
+}
+.final-button:hover {
+    background-color: #d2bca6;
+}
+.final-button:hover img {
+    animation-name: spining;
+    animation-duration: 0.8s;
+}
+.PLATFORM-Text {
+    background-color: rgb(99 102 241);
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 1rem;
+    color: white;
+    outline: none; 
+    outline: rgb(99 102 241) solid 1px;
+    outline-offset: .1875rem;
+    outline-width: 0rem;
+    transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-out, outline-width 0.1s ease-out;
+}
+.PLATFORM-Text:hover {
+    outline: rgb(99 102 241) solid 1px;
+    outline-offset: .1875rem;
+    outline-width: .25rem;
+}
+.PLATFORM-Text:hover p {
+    animation-name: wowo;
+    position: relative;
+    animation-duration: 0.2s;
+}
+@keyframes wowo {
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 2px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+@keyframes spining {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.ch-color {
+    background-image: linear-gradient(to right, #1e171e 10%, #423732);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 16.5rem;
+    color: white;
+}
+.h1text {
+    width: 610px;
+}
+.learn-more-button {
+    background-color: rgb(99 102 241);
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 1rem;
+    outline: rgb(99 102 241) solid 1px;
+    outline-offset: .1875rem;
+    outline-width: 0rem;
+    transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-out, outline-width 0.1s ease-out;
+    font-size: 20px;
+    color: white;
+}
+.learn-more-button:hover {
+    outline: rgb(99 102 241) solid 1px;
+    outline-offset: .1875rem;
+    outline-width: .25rem;
+}
+.learn-more-button:hover p {
+    animation-name: wowo;
+    position: relative;
+    animation-duration: 0.2s;
+}
+/*.Main-download {
+    justify-content: center;
+    display: flex;
+}*/
+.Download-platforms a:hover {
+    outline: rgba(255,255,255,.6) solid 1px;
+    outline-offset: .1875rem;
+    outline-width: .25rem;
+    transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-out, outline-width 0.1s ease-out;
+}
+.Available-browsers a:hover {
+    outline: rgba(255,255,255,.6) solid 1px;
+    outline-offset: .1875rem;
+    outline-width: .25rem;
+    transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-out, outline-width 0.1s ease-out;
+}
+.Download-platforms a:hover, .Available-browsers a:hover {
+    position: relative;
+    cursor: pointer;
+    animation-name: wowo;
+    animation-duration: 0.2s;
+    color: #000;
+}
+@keyframes wowo {
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 2px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+.android-icon-image {
+    margin-top: 5px;
+}
+.chosseyourplatfrome-All-In-One {
+    display: none;
+}
+.chosseyourplatfrome-SecondOne {
+    animation-name: bomboom;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+}
+@keyframes bomboom {
+    0% {
+        opacity: 0;
+        scale: .9;
+    }
+    50% {
+        opacity: .5;
+        scale: 1.05;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.bodybluring-div {
+    position: absolute;
+    backdrop-filter: blur(10px);
+    background-color: #00000073;
+    -webkit-backdrop-filter: blur(4.6875rem);
+    width: 100vw;
+    height: 100vh;
+    height: 200%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: -0;
+    z-index: 4;
+    display: none;
+}
+.Download-All-INOne, .ch-color {
+    z-index: 2;
+}
+.theimageofcard {
+    height: 150px;
+    width: 137px;
+}
+.Idontneedtomentionthatthis-AlINONESECTION {
+    padding: 20px;
+    padding-top: 0;
+    margin-top: -3px;
+    color: #000;
+    z-index: 1;
+    position: relative;
+}
+.justpadd- {
+    background-color: #0f142f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 110px #A0D683;
+}
+.the--searsh {
+    background-color: #5b5eff;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    height: max-content;
+    z-index: 2;
+    position: relative;
+    box-shadow: 2px 2px 10px #5b5eff;
+}
+.Search-abbreviation {
+    color: white;
+    font-family: PLAYITNOW;
+}
+.Search-abbreviation p {
+    color: white;
+    font-family: PLAYITNOW;
+}
+.Available-search-shortcuts {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    column-gap: 7px;
+    color: white;
+    text-decoration: underline
+}
+.Available-search-shortcuts {
+    color: white;
+    cursor: pointer;
+}
+.flexing-cards-divs {
+    display: flex; 
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.news-ads {
+    background-color: rgb(16, 16, 20);
+    font-family: DownloadMe;
+    padding: 1.5rem;
+    color: white;
+    display: grid;
+    gap: 3rem;
+    overflow-x: hidden
+}
+.news-ads h1 {
+    z-index: 3;
+    position: relative;
+    font-size: 1.5rem;
+}
+.news-ads p {
+    z-index: 3;
+    position: relative;
+    font-size: 1rem;
+}
+.bluring-img-background {
+    width: 100vh;
+    filter: blur(10rem);
+    height: 100svh;
+    inset-block-start: calc(65svh - 4.5rem);
+    object-fit: cover;
+    opacity: .5;
+    position: absolute;
+    transform: translateZ(0);
+    width: 100vw;
+    position: absolute;
+}
+.f3lex {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    z-index: 3;
+    padding-left: 1.4rem;
+    transition: left 0.5s ease;
+    left: 0;
+}
+#theboostrapcard {
+    background-color: rgba(236,237,238,.1);
+    width: 23rem;
+    border-radius: 10px;
+}
+#theboostrapcard p {
+    z-index: 3;
+    width: 21rem;
+    position: relative;
+}
+#theboostrapcard img {
+    height: 200px;
+}
+#myflexerdiv {
+    z-index: 3;
+    position: relative;
+    display: flex;
+    gap: 46rem;
+}
+#myflexerdivbutton p {
+    font-size: 1.5rem;
+    font-family: DISCIVERFONT;
+    letter-spacing: 1px
+}
+#myflexerdivbutton {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#myflexerdivbutton a {
+    text-decoration: none;
+    color: white;
+}
+#rightbutton {
+    background-color: #a4a8a4;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 2rem;
+    position: absolute;
+    left: 79%;
+    top: 45%;
+    opacity: 0;
+}
+#leftbutton {
+    background-color: #a4a8a4;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 2rem;
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+#leftbutton span {
+    position: relative
+}
+#leftbutton:hover span {
+    animation-name: spanwow;
+    animation-duration: 0.2s;
+}
+#leftbutton:hover {
+    outline: #a4a8a4 solid 1px;
+    outline-offset: .1875rem;
+    outline-width: .25rem;
+}
+#rightbutton:hover {
+    outline: #a4a8a4 solid 1px;
+    outline-offset: .1875rem;
+    outline-width: .25rem;
+}
+#rightbutton span {
+    position: relative
+}
+#rightbutton:hover span {
+    animation-name: spanwow;
+    animation-duration: 0.2s;
+}
+@keyframes spanwow {
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 1.5px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+.Discordserverbuttondownloadpage {
+    color: rgb(99 102 241);
+    cursor: pointer;
+}
+.Discordserverbuttondownloadpage:hover {
+    text-decoration: underline;
+    color: rgb(99 102 241);
+}
+.h1Look {
+    font-size: 2.4rem;
+}
+.faq-server-section {
+    padding-left: 1rem;
+}
+.faq-server-section p {
+    font-size: 1.2rem;
+}
+.ma5fi {
+    display: none;
+}
+.flex-2-1 a:hover {
+    text-decoration: none;
+    color: white;
+}
+#thethop,#thethoppp {
+    color: #b9b9bc;
+}
+.icons-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+/*.icons-footer svg path {
+    transition: fill 0.3s ease;
+    cursor: pointer;
+}
+.icons-footer svg {
+    transition: fill 0.3s ease;
+    cursor: pointer;
+}
+.icons-footer svg:hover path{
+    fill: rgb(99, 102, 241) !important;
+}
+.icons-footer svg:hover {
+    filter: drop-shadow(0px 0px 15px rgb(99, 102, 241));
+}*/
+.icons-footer-sp {
+    display: flex;
+    column-gap: 1rem;
+}
+.upTOup-footer img {
+    width: 17px;
+    height: 16px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+.upTOup-footer h4 {
+    color: #ccc;
+    cursor: pointer;
+}
+#BackTopaId {
+    display: flex;
+    column-gap: 5px;
+}
+#BackTopaIdd {
+    display: flex;
+    column-gap: 5px;
+}
+.the-hr-bottom {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+.PAVELCOOL {
+    padding: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+    background-color: #7f7f7f;
+    color: #ccc;
+    transition: outline-color 0.1s ease-out, outline-offset 0.1s ease-out, outline-width 0.1s ease-out;
+    outline-offset: .1875rem;
+    outline-width: 0rem;
+    transition: 0.1s;
+}
+.PAVELCOOL:hover {
+    outline: red solid 1px;
+    background-color: red;
+    outline-offset: .1875rem;
+    outline-width: .20rem;
+    color: white;
+}
+.PAVELCOOL:hover p {
+    animation-name: wowo;
+    animation-duration: 0.2s;
+}
+.yt-pavcool-link {
+    margin-bottom: 1.5rem; 
+    justify-content: space-between; 
+    display: flex;
+    align-items: center;
+}
+.BackTopaIdcolor {
+    color: #ccc;
+}
+.BackTopaIdcolor:hover h4 {
+    text-decoration: underline;
+    color: #ccc;
+}
+.pavcool-h5-style {
+    color: #ccc;
+    font-size: 15px;
+}
+.pavcool-h5-style a {
+    text-decoration: underline;
+    color: #ccc; 
+    font-size: 15px;
+}
+.pavcool-h5-style a:hover {
+    color: #ccc;
+}
+.foo-tter {
+    display: grid;
+    background-color: rgb(42, 42, 42);
+    padding: 25px;
+    margin-top: 3.5rem;
+}
+#bodybluring-div2- {
+    backdrop-filter: blur(1px);
+    z-index: 2;
+    height: 100%;
+}
+/**/
+.carCard1- {
+    width: 250px;
+    background-color: #14285B;
+    border: 2px solid #0C2042;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    overflow-x: hidden;
+}
+.card-11header {
+    text-align: center;
+    background-color: #256DC3;
+    padding: 10px;
+}
+.card-11header h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.card-11header img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.card-11info, .battle-11info {
+    padding: 10px;
+    border-top: 2px solid #0C2042;
+}  
+.card-11info h3, .battle-11info h3 {
+    background-color: #256DC3;
+    padding: 5px;
+    margin: 0 -10px 10px -10px;
+    text-align: center;
+}
+.card-11info p, .battle-11info p {
+    margin: 5px 0;
+    color: white;
+}
+.card-11info strong, .battle-11info strong {
+    color: yellow;
+}
+.thecardb7alal5r {
+    display: grid;
+    font-family: DownloadMe;
+    color: white;
+    /* animation-duration: .3s; */
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 10px;
+    width: max-content;
+    display: none;
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #302c5c, black);
+    animation-name: bomboom;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+}
+.carCard1-imgs {
+    display: grid; 
+    text-align: center; 
+    background-color: #661C0C;
+    border: 1px solid white;
+    overflow-x: scroll;
+}
+.carCard1-imgs img {
+    cursor: pointer;
+}
+.carCard1-imgs::-webkit-scrollbar {
+    width: 0px;
+}
+.my-carCard-2 {
+    margin-top: 5px;
+}
+.carCard1-imgs-2 {
+    display: flex; 
+    column-gap: 5px; 
+    padding: 0.5rem;
+}
+.my-carCard-2 p {
+    font-size: 13px;
+    color: #e6e6e6;
+}
+.my-carCard-2-c span, .my-carCard-2-p p {
+    color: yellow;
+}
+.Passive-Skill- {
+    font-size: 25px;
+}
+.Requirements-levels img {
+    width: 3rem;
+    cursor: pointer;
+}
+.Requirements-levels {
+    margin-top: 10px;
+}
+.Requirements-levels-f {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: #e6e6e6;
+    margin-top: 5px;
+}
+.tomatosayNo {
+    font-family: PLAYITNOW;
+}
+#user-menu-button {
+    margin-right: 2rem;
+    position: fixed;
+    right: -2%;
+}
+#TAMATBARASNI {
+    display: block;
+}
+/*Maps-cards page*/
+.maps-big-title- {
+    font-family: DISCIVERFONT;
+    font-size: 5rem;
+    padding-bottom: 5rem;
+    padding-top: 4rem;
+}
+.sketchfab-embed-wrapper iframe {
+    width: 100%;
+    height: 500px;
+}
+.carousel-scevtion-maps {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.maps-big-title-p {
+    line-height: 1.2rem;
+}
+.maps-big-title-sub {
+    font-family: DISCIVERFONT;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+#thematps-hr1 {
+    width: 90%;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+#d-blcok-img {
+    height: 500px;
+}
+#foter-idone {
+    display: grid;
+}
+/* ---- */
+#final-button-id {
+    display: none;
+}
+.Available-search-shortcuts a:hover {
+    color: white;
+}
+@media screen and (max-width:360px) and (max-height: 740px) {
+    img {
+        width: 50%;
+    }
+    .move {
+        width: 55%;
+        transition: 2s;
+    }
+    #dnwl-button {
+        display: none;
+    }
+    .for-video-by-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .the-home-video {
+        width: 200%;
+    }
+    .div-just-for-flex {
+        display: block;
+    }
+    .bunk h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .CWK {
+        font-size: 20px;
+    }
+    .K {
+        font-size: 20px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 80px;
+    }
+    .AEGNTS-LINK {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width:390px) and (max-height: 844px) {
+    img {
+        width: 50%;
+    }
+    .move {
+        width: 55%;
+        transition: 2s;
+    }
+    #dnwl-button {
+        display: none;
+    }
+    .for-video-by-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .the-home-video {
+        width: 200%;
+    }
+    .div-just-for-flex {
+        display: block;
+    }
+    .bunk h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .CWK {
+        font-size: 20px;
+    }
+    .K {
+        font-size: 20px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 80px;
+    }
+    .AEGNTS-LINK {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+    }
+    .for-video-text {
+        width: auto;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .flex-2-2-1 {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .game-info {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        padding: 15px;
+    }
+    .Main-download {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        padding-top: 300px;
+    }
+    .ToGiveGapping {
+        justify-content: center;
+        display: grid;
+    }
+    .Download-All-INOne {
+        width: 320px;
+    }
+    .gpaerfixer {
+        display: grid;
+        gap: 5px;
+    }
+    .ch-color {
+        gap: 5rem;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        width: 320px;
+    }
+    .flexer {
+        justify-items: center;
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 1rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 0.7rem;
+    }
+    .h1text {
+        width: 300px;
+    }
+    #myflexerdiv {
+        display: grid;
+        gap: 2rem;
+    }
+    #myflexerdivbutton {
+        width: max-content;
+    }
+}
+@media (min-width: 344px) and (max-width: 576px) {
+    img {
+        width: 40%;
+    }
+    .move {
+        width: 45%;
+        transition: 2s;
+    }
+    #dnwl-button {
+        display: none;
+    }
+    .for-video-by-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .the-home-video {
+        width: 200%;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 80px;
+    }
+    .AEGNTS-LINK {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+    }
+    .for-video-text {
+        width: 100%;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .flex-2-2-1 {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .game-info {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .Main-download {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        padding-top: 300px;
+    }
+    .ToGiveGapping {
+        justify-content: center;
+        display: grid;
+    }
+    .Download-All-INOne {
+        width: 320px;
+    }
+    .gpaerfixer {
+        display: grid;
+        gap: 5px;
+    }
+    .ch-color {
+        gap: 5rem;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        width: 320px;
+    }
+    .flexer {
+        justify-items: center;
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 1rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 0.7rem;
+    }
+    .h1text {
+        width: 300px;
+    }
+    #myflexerdiv {
+        display: grid;
+        gap: 2rem;
+    }
+    #myflexerdivbutton {
+        width: max-content;
+    }
+}
+@media (min-width: 344px) {
+    img {
+        width: 55%;
+    }
+    .move {
+        width: 60%;
+        transition: 2s;
+    }
+    #dnwl-button {
+        display: none;
+    }
+    .for-video-by-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .the-home-video {
+        width: 300%;
+    }
+    .div-just-for-flex {
+        display: block;
+    }
+    .bunk h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .CWK {
+        font-size: 30px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 80px;
+    }
+    .AEGNTS-LINK {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+    }
+    .MAPS-LINK {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .flex-2-2-1 {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .flex-2-1 {
+        display: grid;
+        gap: 5px;
+    }
+    .game-info {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .Main-download {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        padding-top: 300px;
+    }
+    .ToGiveGapping {
+        justify-content: center;
+        display: grid;
+    }
+    .Download-All-INOne {
+        width: 320px;
+    }
+    .gpaerfixer {
+        display: grid;
+        gap: 5px;
+    }
+    .ch-color {
+        gap: 5rem;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        width: 320px;
+    }
+    .flexer {
+        justify-items: center;
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 1rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 0.7rem;
+    }
+    .h1text {
+        width: 300px;
+    }
+    .chosseyourplatfrome-All-In-One {
+        width: max-content;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 5;
+        top: 35%;
+    }
+    .chosseyourplatfrome-SecondOne {
+        display: grid;
+        font-family: DownloadMe;
+        color: white;
+        /*animation-duration: .3s;*/
+        backdrop-filter: blur(4.6875rem);
+        background-color: #00000073;
+        -webkit-backdrop-filter: blur(4.6875rem);
+        z-index: 1;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    .chosseyourplatfrome-SecondOne h1 {
+        font-size: 2rem;
+    }
+    .Available-browsers, .Download-platforms {
+        font-family: DownloaddMe;
+        color: #000;
+        padding-top: 15px;
+    }
+    #Layer_1 {
+        width: 1rem;
+        height: 1rem;
+    }
+    #Layer_2 {
+        width: 1rem;
+        height: 1rem;
+    }
+    .Download-platforms img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .Available-browsers a, .Download-platforms a {
+        display: flex;
+        cursor: pointer;
+    }
+    .Available-browsers {
+        padding-bottom: 30px;
+    }
+    .Download-platforms {
+        display: grid;
+        gap: .75rem;
+    }
+    .chosseyourplatfrome-SecondOne a {
+        background-color: rgba(255,255,255,.6);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: .3rem;
+        padding-bottom: .3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 1.1rem;
+        column-gap: .5rem;
+        font-family: PLATFORMS;
+    }
+    .NotYet- {
+        opacity: 0.5;
+        color: #000;
+    }
+    .NotYet-:hover {
+        color: #000;
+    }
+    #myflexerdiv {
+        display: grid;
+        gap: 1rem;
+    }
+    #myflexerdivbutton {
+        width: max-content;
+    }
+    #theboostrapcard {
+        width: 21rem;
+    }
+    .f3lex:hover #rightbutton {
+        opacity: 1;
+        transition: opacity 0.6s ease;
+    }
+    .f3lex {
+        overflow-x: auto;
+        padding-left: 0;
+        width: 350px;
+        left: -5%;
+    }
+    .f3lex::-webkit-scrollbar {
+        width: 0px;
+    }
+    #again2flex::-webkit-scrollbar {
+        width: 0px;
+    }
+    #toComServerDis {
+        display: grid;
+        padding: 25px;
+        background-color: rgba(236,237,238,.1);
+    }
+    #toComServerDis:hover {
+        outline: #a4a8a4 solid 1px;
+        outline-offset: .1875rem;
+        outline-width: .25rem;
+    }
+    #againforflex {
+        display: grid; 
+        justify-items: left;
+    }
+    #thethoppp {
+        width: 13rem;
+        text-wrap: balance;
+        text-align: left;
+        line-height: 1.5rem;
+    }
+    #thethop {
+        width: 15rem;
+        text-wrap: balance;
+        text-align: left;
+        line-height: 1.5rem;
+    }
+    #again2flex {
+        display: flex;
+        column-gap: 1rem;
+    }
+    .faq-server-section {
+        gap: 1rem;
+        display: grid;
+        position: relative;
+        z-index: 3;
+        padding-left: 0;
+    }
+    .svgh3flex {
+        display: flex;
+        gap: 0.5rem;
+    }
+    .ma5fi {
+        display: none;
+    }
+    .h1Look {
+        font-size: 1.7rem;
+    }
+    .faq-server-section p {
+        font-size: 0.85rem;
+    }
+    #again2flex {
+        width: 320px;
+        padding: 10px;
+        overflow: scroll;
+    }
+    #again2flex ::-webkit-scrollbar {
+        width: 0px;
+    }
+    #rightbutton {
+        left: 27%;
+    }
+    .card {
+        min-width: 150px;
+        flex: 0 0 auto;
+    }
+    #rightbutton,#leftbutton {
+        display: none;
+    }
+    #theboostrapcard p {
+        width: auto;
+    }
+    #BackTopaIdd {
+        display: none;
+    }
+    .foo-tter {
+        margin-top: 0rem;
+    }
+    .jst-left-8plac {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    .jst-left-8plac div {
+        flex: 1 1 50%;
+        max-width: 137px;
+        color: white;
+        padding-top: 1rem;
+        cursor: pointer;
+    }
+    .Idontneedtomentionthatthis-AlINONESECTION {
+        background-color: #0f142f;
+        background-image: url(https://tatsu.gg/landing-page-background-pattern.png);
+        margin-top: 5px;
+        padding-top: 1rem;
+        color: white;
+    }
+    .thecardwhotalk p {
+        text-align: center;
+    }
+    .thecardb7alal5r {
+        display: grid;
+        display: none;
+    }
+    .carCard1- {
+        overflow: auto;
+        height: 30rem;
+        max-width: 16rem;
+        overflow-x: hidden;
+    }
+    .carCard1-::-webkit-scrollbar {
+        width: 0px;
+    }
+    .sketchfab-embed-wrapper iframe {
+        height: 220px;
+    }
+    .carousel-scevtion-maps {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+    #final-button-id {
+        display: block;
+    }
+    .final-button {
+        display: none;
+    }
+}
+@media (min-width: 412px) {
+    img {
+        width: 55%;
+    }
+    .move {
+        width: 60%;
+        transition: 2s;
+    }
+    #dnwl-button {
+        display: none;
+    }
+    .for-video-by-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .the-home-video {
+        width: 200%;
+    }
+    .div-just-for-flex {
+        display: block;
+    }
+    .bunk h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .CWK {
+        font-size: 30px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 80px;
+    }
+    .AEGNTS-LINK {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+    }
+    .for-video-text {
+        width: auto;
+    }
+    .game-info {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .flex-2-2-1 {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .Main-download {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        padding-top: 300px;
+    }
+    .ToGiveGapping {
+        justify-content: center;
+        display: grid;
+    }
+    .Download-All-INOne {
+        width: 410px;
+        border-radius: 10px;
+    }
+    .gpaerfixer {
+        display: grid;
+        gap: 5px;
+    }
+    .ch-color {
+        gap: 5rem;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        width: 410px;
+    }
+    .flexer {
+        justify-items: center;
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 1.5rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 1rem;
+    }
+    .h1text {
+        width: 350px;
+    }
+    .Main-download {
+        padding: 70px;
+        padding-top: 400px;
+        padding-bottom: 112px;
+    }
+    .chosseyourplatfrome-All-In-One {
+        width: max-content;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 5;
+        top: 35%;
+    }
+    .chosseyourplatfrome-SecondOne {
+        display: grid;
+        font-family: DownloadMe;
+        color: white;
+        /*animation-duration: .3s;*/
+        backdrop-filter: blur(4.6875rem);
+        background-color: #00000073;
+        -webkit-backdrop-filter: blur(4.6875rem);
+        z-index: 1;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    .chosseyourplatfrome-SecondOne h1 {
+        font-size: 2rem;
+    }
+    .Available-browsers, .Download-platforms {
+        font-family: DownloaddMe;
+        color: #000;
+        padding-top: 15px;
+    }
+    #Layer_1 {
+        width: 1rem;
+        height: 1rem;
+    }
+    #Layer_2 {
+        width: 1rem;
+        height: 1rem;
+    }
+    .Download-platforms img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .Available-browsers a, .Download-platforms a {
+        display: flex;
+        cursor: pointer;
+    }
+    .Available-browsers {
+        padding-bottom: 30px;
+    }
+    .Download-platforms {
+        display: grid;
+        gap: .75rem;
+    }
+    .chosseyourplatfrome-SecondOne a {
+        background-color: rgba(255,255,255,.6);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: .3rem;
+        padding-bottom: .3rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        font-size: 1.1rem;
+        column-gap: .5rem;
+        font-family: PLATFORMS;
+    }
+    .NotYet- {
+        opacity: 0.5;
+        color: #000;
+    }
+    .NotYet-:hover {
+        color: #000;
+    }
+    #theboostrapcard {
+        width: 23rem;
+    }
+    #rightbutton {
+        left: 30%;
+    }
+    #again2flex {
+        width: 390px;
+        padding: 10px;
+        overflow: scroll;
+    }
+    .f3lex {
+        width: 370px;
+        left: 0;
+    }
+    .faq-server-section p {
+        font-size: 1rem;
+    }
+    .foo-tter {
+        margin-top: 1rem;
+    }
+    .thecardb7alal5r {
+        top: 50%;
+    }
+    .carCard1- {
+        height: 45rem;
+        width: 20rem;
+        max-width: 25rem;
+    }
+}
+@media (min-width: 430px) {
+    .carCard1- {
+        width: 25rem;
+    }
+    .sketchfab-embed-wrapper iframe {
+        height: 250px;
+    }
+}
+@media (min-width: 477px) {
+    #rightbutton {
+        left: 31.2%;
+    }
+    .f3lex {
+        overflow-x: auto;
+        padding-left: 0;
+        width: 477px;
+        left: -5%;
+        padding: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    #again2flex  {
+        width: 453px;
+    }
+}
+@media (min-width: 480px) {
+    .sketchfab-embed-wrapper iframe {
+        height: 250px;
+    }
+}
+@media (min-width: 510px) {
+    .Main-download {
+        gap: 20px;
+        padding: 70px;
+        padding-top: 250px;
+        padding-bottom: 112px;
+    }
+    .Download-All-INOne {
+        border-radius: 10px;
+    }
+    .chosseyourplatfrome-SecondOne {
+        padding: 1rem;
+    }
+    .chosseyourplatfrome-SecondOne a {
+        padding-left: 6.5rem;
+        padding-right: 6.5rem;
+    }
+    #rightbutton {
+        left: 34%;
+    }
+    #h1Look {
+        font-size: 1.6rem;
+        display: none;
+    }
+    .ma5fi {
+        display: block;
+    }
+    .faq-server-section p {
+        font-size: 1.2rem;
+    }
+    #again2flex  {
+        width: 487px;
+    }
+    .f3lex {
+        overflow-x: auto;
+        padding-left: 0;
+        width: 509px;
+        padding-left: 10px;
+    }
+    #theboostrapcard p {
+        z-index: 3;
+        width: 21rem;
+        position: relative;
+    }
+    .jst-left-8plac {
+        justify-content: flex-start;
+    }
+    .carousel-scevtion-maps {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media (min-width: 540px) {
+    .sketchfab-embed-wrapper iframe {
+        height: 300px;
+    }
+}
+@media (min-width: 576px) {
+    img {
+        width: 40%;
+    }
+    .move {
+        width: 45%;
+        transition: 2s;
+    }
+    #dnwl-button {
+        display: none;
+    }
+    .for-video-by-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .the-home-video {
+        width: 200%;
+    }
+    .div-just-for-flex {
+        display: block;
+    }
+    .bunk h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .CWK {
+        font-size: 30px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 80px;
+    }
+    .AEGNTS-LINK {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+    }
+    .Main-download {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        padding: 70px;
+        padding-top: 250px;
+        padding-bottom: 112px;
+    }
+    .ToGiveGapping {
+        justify-content: center;
+        display: grid;
+    }
+    .Download-All-INOne {
+        width: 500px;
+    }
+    .gpaerfixer {
+        display: grid;
+        gap: 5px;
+    }
+    .ch-color {
+        gap: 5rem;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .flexer {
+        justify-items: center;
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 1.6rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 1rem;
+    }
+    .h1text {
+        width: 500px;
+    }
+    .ch-color {
+        width: -webkit-fill-available;
+    }
+    .chosseyourplatfrome-SecondOne {
+        padding: 1.5rem;
+    }
+    .chosseyourplatfrome-SecondOne a {
+        background-color: rgba(255,255,255,.6);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: .3rem;
+        padding-bottom: .3rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        font-size: 1.1rem;
+        column-gap: .5rem;
+        font-family: PLATFORMS;
+    }
+    .faq-server-section h1 {
+        font-size: 1.61rem;
+    }
+    #h1Look {
+        display:none;
+    }    
+    #again2flex {
+        overflow: visible;
+        padding: 0;
+        width: max-content;
+    }
+    .f3lex {
+        overflow-x: auto;
+        width: 579px;
+    }
+    .foo-tter {
+        margin-top: 2.5rem;
+    }
+    .carCard1- {
+        max-width: max-content;
+        width: max-content;
+        padding: 5px;
+    }
+}
+@media (min-width: 640px) {
+    #dnwl-button {
+        display: flex;
+    }
+    .the-home-video {
+        width: 150%;
+    }
+    .the-home-video {
+        width: 130%;
+    }
+    .div-just-for-flex {
+        display: block;
+    }
+    .bunk h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .CWK {
+        font-size: 40px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 90px;
+    }
+    .AEGNTS-LINK {
+        width: max-content;
+        margin-top: 0px;
+    }
+    .MAPS-LINK {
+        width: max-content;
+        margin-top: 0px;
+    }
+    .Main-download {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        padding-top: 300px;
+    }
+    .ToGiveGapping {
+        justify-content: center;
+        display: grid;
+    }
+    .Download-All-INOne {
+        width: 500px;
+    }
+    .gpaerfixer {
+        display: grid;
+        gap: 5px;
+    }
+    .ch-color {
+        gap: 5rem;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .flexer {
+        justify-items: center;
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 1.6rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 1rem;
+    }
+    .h1text {
+        width: 610px;
+    }
+    #rightbutton {
+        left: 48%;
+    }
+    .faq-server-section {
+        padding-left: 1rem;
+    }
+    .faq-server-section h1 {
+        font-size: 1.7rem;
+    }
+    #h1Look {
+        font-size: 2.4rem;
+    }
+    .f3lex {
+        width: 645px;
+        left: -4%;
+    }
+    .foo-tter {
+        margin-top: 3rem;
+    }
+    .carCard1-imgs {
+        overflow: hidden;
+    }
+    .sketchfab-embed-wrapper iframe {
+        height: 400px;
+    }
+    .sketchfab-embed-wrapper iframe {
+        height: 350px;
+    }
+}
+@media (min-width: 700px) {
+    .sketchfab-embed-wrapper iframe {
+        height: 400px;
+    }
+}
+@media (min-width: 709px) {
+    #rightbutton {
+        left: 53%;
+    }
+    .faq-server-section h1 {
+        font-size: 2rem;
+    }
+    .f3lex {
+        width: 711px;
+    }
+    #final-button-id {
+        display: none;
+    }
+    .final-button {
+        display: block;
+    }
+}
+@media (min-width: 768px) {
+    .the-home-video {
+        width: 130%;
+    }
+    .div-just-for-flex {
+        display: block;
+    }
+    .bunk h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .CWK {
+        font-size: 40px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .heros-your {
+        font-size: 100px;
+    }
+    .AEGNTS-LINK {
+        width: max-content;
+        margin-top: 0px;
+    }
+
+    .flex-2-1 {
+        display: flex;
+        gap: 30px;
+    }
+    .flex-2-2-1 {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+    }
+    .game-info {
+        padding: 50px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    .Maps-Info {
+        background-image: url(images/DESINGBACK3-768.png);
+        background-size: cover;
+    }
+    .Main-download {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        padding-top: 300px;
+    }
+    .ToGiveGapping {
+        justify-content: center;
+        display: grid;
+    }
+    .Download-All-INOne {
+        width: 500px;
+    }
+    .gpaerfixer {
+        display: grid;
+        gap: 5px;
+    }
+    .ch-color {
+        gap: 5rem;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .flexer {
+        justify-items: center;
+        display: grid;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 1.6rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 1rem;
+    }
+    #myflexerdiv {
+        gap: 3.5rem;
+        display: flex;
+    }
+    #rightbutton {
+        left: 58%;
+    }
+    .faq-server-section h1 {
+        font-size: 2.4rem;
+    }
+    .f3lex {
+        width: auto;
+        left: 0;
+        overflow: visible;
+        padding: 0px;
+    }
+    #rightbutton,#leftbutton {
+        display: grid;
+    }
+}
+@media (min-width: 834px) {
+    #rightbutton {
+        left: 65%;
+    }
+    #myflexerdiv {
+        gap: 8rem;
+    }
+    .sketchfab-embed-wrapper iframe {
+        height: 500px;
+    }
+}
+@media (min-width: 938px) {
+    #myflexerdiv {
+        gap: 14rem;
+    }
+}
+@media (min-width: 992px) {
+    .frcenter h1 {
+        font-size: 20px;
+    }
+    .the-home-video {
+        width: 100%;
+    }
+    .div-just-for-flex {
+        display: block;
+        align-items: center;
+    }
+    .bunk h1 {
+        font-size: 64px;
+        line-height: 60px;
+    }
+    .bunk p {
+        margin-top: 16px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .forflex {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Heros-infos-mini {
+        display: block;
+    }
+    .Heros-infos {
+        display: none;
+    }
+    #Maps-infos {
+        display: contents;
+    }
+    #Main-Map {
+        display: none;
+    }
+    .game-info  {
+        padding: 170px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    .Maps-Info {
+        background-image: url(images/BACKDESING3-992.png);
+        background-size: cover;
+    }
+    .Main-download {
+        padding-left: 20px;
+        padding-right: 2px;
+        padding-top: 400px;
+        display: grid;
+    }
+    .gpaerfixer {
+        display: flex;
+        gap: 10rem;
+    }
+    .Download-All-INOne {
+        width: 950px;
+    }
+    .ch-color {
+        gap: 5rem;
+        width: 950px;
+        display: flex;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 2rem;
+    }
+    .h1text {
+        width: 610px;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 1.2rem;
+    }
+    .flexer {
+        display: block;
+        padding-top: 15px;
+    }
+    .chosseyourplatfrome-All-In-One {
+        width: max-content;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 5;
+        top: 35%;
+    }
+    .chosseyourplatfrome-SecondOne {
+        display: grid;
+        font-family: DownloadMe;
+        color: white;
+        /*animation-duration: .3s;*/
+        backdrop-filter: blur(4.6875rem);
+        background-color: #00000073;
+        -webkit-backdrop-filter: blur(4.6875rem);
+        z-index: 1;
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    .chosseyourplatfrome-SecondOne h1 {
+        font-size: 2rem;
+    }
+    .Available-browsers, .Download-platforms {
+        font-family: DownloaddMe;
+        color: #000;
+        padding-top: 15px;
+    }
+    #Layer_1 {
+        width: 1rem;
+        height: 1rem;
+    }
+    #Layer_2 {
+        width: 1rem;
+        height: 1rem;
+    }
+    .Download-platforms img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .Available-browsers a, .Download-platforms a {
+        display: flex;
+        cursor: pointer;
+    }
+    .Available-browsers {
+        padding-bottom: 30px;
+    }
+    .Download-platforms {
+        display: grid;
+        gap: .75rem;
+    }
+    .chosseyourplatfrome-SecondOne a {
+        background-color: rgba(255,255,255,.6);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: .3rem;
+        padding-bottom: .3rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        font-size: 1.1rem;
+        column-gap: .5rem;
+        font-family: PLATFORMS;
+    }
+    .NotYet- {
+        opacity: 0.5;
+        color: #000;
+    }
+    .NotYet-:hover {
+        color: #000;
+    }
+    #myflexerdiv {
+        gap: 17rem;
+    }
+    #rightbutton {
+        left: 68%;
+    }
+}
+@media (min-width: 1024px) {
+    .bunk h1 {
+        font-size: 64px;
+        line-height: 60px;
+    }
+    .bunk p {
+        margin-top: 16px;
+        font-size: 60p;
+    }
+    .CWK {
+        font-size: 64px;
+    }
+    .bunk {
+        max-width: 100%;
+    }
+    .video-div {
+        align-items: center;
+        display: contents;
+    }
+    #mapflex {
+        margin-top: 50px;
+    }
+    .Heros-infos-mini {
+        display: none;
+    }
+    .forflex {
+        display: flex;
+    }
+    .Heros-infos {
+        display: inline-grid;
+    }
+    #Maps-infos {
+        display: inline-grid;
+    }
+    #Main-Map {
+        display: block;
+    }
+    .Maps-Info {
+        background-image: url(images/BACKDESING2.png);
+        background-size: cover;
+    }
+    .Main-download {
+        padding-left: 15px;
+        padding-right: 2px;
+    }
+    .gpaerfixer {
+        gap: 13rem;
+    }
+    .Download-All-INOne {
+        width: 1000px;
+    }
+    .ch-color {
+        gap: 8rem;
+        width: 1000px;
+    }
+    .h1text {
+        width: 610px;
+    }
+    .chosseyourplatfrome-All-In-One {
+        width: max-content;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 5;
+        top: 35%;
+    }
+    .chosseyourplatfrome-SecondOne {
+        display: grid;
+        font-family: DownloadMe;
+        color: white;
+        /*animation-duration: .3s;*/
+        backdrop-filter: blur(4.6875rem);
+        background-color: #00000073;
+        -webkit-backdrop-filter: blur(4.6875rem);
+        z-index: 1;
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    .chosseyourplatfrome-SecondOne h1 {
+        font-size: 2rem;
+    }
+    .Available-browsers, .Download-platforms {
+        font-family: DownloaddMe;
+        color: #000;
+        padding-top: 15px;
+    }
+    #Layer_1 {
+        width: 1rem;
+        height: 1rem;
+    }
+    #Layer_2 {
+        width: 1rem;
+        height: 1rem;
+    }
+    .Download-platforms img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .Available-browsers a, .Download-platforms a {
+        display: flex;
+        cursor: pointer;
+    }
+    .Available-browsers {
+        padding-bottom: 30px;
+    }
+    .Download-platforms {
+        display: grid;
+        gap: .75rem;
+    }
+    .chosseyourplatfrome-SecondOne a {
+        background-color: rgba(255,255,255,.6);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: .3rem;
+        padding-bottom: .3rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        font-size: 1.1rem;
+        column-gap: .5rem;
+        font-family: PLATFORMS;
+    }
+    .NotYet- {
+        opacity: 0.5;
+        color: #000;
+    }
+    .NotYet-:hover {
+        color: #000;
+    }
+    #myflexerdiv {
+        gap: 19rem;
+    }
+}
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+    /*.for-video-by-centre {
+        height: 635px;
+    }*/
+    .Maps-Info {
+        background-image: url(ADVENTURE.png);
+    }
+}
+@media (min-width: 1200px) {
+    .frcenter h1 {
+        font-size: 30px;
+    }
+    .info {
+        display: none;
+        background-color: white;
+        background-image: url(https://i.postimg.cc/J0TRZ6md/Design-sans-titre1.png);
+        padding: 48px;
+    }
+    .div-just-for-flex {
+        display: flex;
+        align-items: flex-start; 
+        justify-content: space-between; 
+        /*align-items: center;*/
+    }
+    .bunk {
+        max-width: 60%; 
+    }
+    .bunk h1 {
+        margin-bottom: 16px;
+        font-size: 100px;
+        line-height: 100px;
+        font-family: "Core Sans E W01 55 Medium";
+    }
+    .bunk p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .video-div {
+        max-width: 40%; 
+        display: inline-grid;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+    .the-trailer-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .CWK {
+        font-size: 70px;
+    }
+    .weight {
+        font-weight: 700;
+    }
+    .map-flex {
+        display: flex;
+        justify-content: center;
+    }
+    #mapflex {
+        margin-top: 160px;
+    }
+    .map-flex img {
+        animation: up-and-down 5s linear infinite;
+    }
+    #Maps-infos {
+        display: inline-grid;
+    }
+    #Main-Map {
+        display: block;
+    }
+    .Maps-Info {
+        background-size: cover;
+    }
+    .Main-download {
+        padding-left: 20px;
+        padding-right: 2px;
+    }
+    .gpaerfixer {
+        display: flex;
+        gap: 10rem;
+    }
+    .ch-color {
+        gap: 5rem;
+        width: 950px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 2.4rem;
+    }
+    .Main-download {
+        padding: 70px;
+        padding-top: 400px;
+        padding-bottom: 112px;
+    }
+    .Download-All-INOne, .ch-color {
+        width: -webkit-fill-available;
+    }
+    .ch-color {
+        gap: 16.5rem;
+    }
+    .gpaerfixer {
+        gap: 15.5rem;
+    }
+    .h1text {
+        width: 610px;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 2.2rem;
+    }
+    .GAMEDOWNLOAD-SUBTITLE {
+        font-size: 1.2rem;
+    }
+    .chosseyourplatfrome-All-In-One {
+        width: max-content;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 5;
+        top: 35%;
+    }
+    .chosseyourplatfrome-SecondOne {
+        display: grid;
+        font-family: DownloadMe;
+        color: white;
+        /*animation-duration: .3s;*/
+        backdrop-filter: blur(4.6875rem);
+        background-color: #00000073;
+        -webkit-backdrop-filter: blur(4.6875rem);
+        z-index: 1;
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    .chosseyourplatfrome-SecondOne h1 {
+        font-size: 2rem;
+    }
+    .Available-browsers, .Download-platforms {
+        font-family: DownloaddMe;
+        color: #000;
+        padding-top: 15px;
+    }
+    #Layer_1 {
+        width: 1rem;
+        height: 1rem;
+    }
+    #Layer_2 {
+        width: 1rem;
+        height: 1rem;
+    }
+    .Download-platforms img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .Available-browsers a, .Download-platforms a {
+        display: flex;
+        cursor: pointer;
+    }
+    .Available-browsers {
+        padding-bottom: 30px;
+    }
+    .Download-platforms {
+        display: grid;
+        gap: .75rem;
+    }
+    .chosseyourplatfrome-SecondOne a {
+        background-color: rgba(255,255,255,.6);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: .3rem;
+        padding-bottom: .3rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        font-size: 1.1rem;
+        column-gap: .5rem;
+        font-family: PLATFORMS;
+    }
+    .NotYet- {
+        opacity: 0.5;
+        color: #000;
+    }
+    .NotYet-:hover {
+        color: #000;
+    }
+    #myflexerdiv {
+        gap: 30rem;
+    }
+    #rightbutton {
+        display: none;
+    }
+    .ma5fi {
+        display: none;
+    }
+    #h1Look {
+        display: block;
+    }
+    .faq-server-section {
+        display: flex;
+        column-gap: 10rem;
+    }
+    #BackTopaIdd {
+        display: flex;
+    }
+    .pavcool-h5-style a{
+        text-decoration: none;
+        color: #ccc; 
+    }
+    .foo-tter {
+        margin-top: 3.5rem;
+    }
+    .sketchfab-embed-wrapper iframe {
+        width: 100%;
+        height: 600px;
+    }
+    #d-blcok-img {
+        height: 600px;
+    }
+}
+@media (min-width: 1250px) {
+    .gpaerfixer {
+        gap: 18rem;
+    }
+}
+@media (min-width: 1280px) {
+    .for-video-by-centre {
+        height: 100%;
+    }
+    .info {
+        display: none;
+        background-color: white;
+        background-image: url(https://i.postimg.cc/J0TRZ6md/Design-sans-titre1.png);
+        padding: 48px;
+    }
+    .div-just-for-flex {
+        display: flex;
+        align-items: flex-start; 
+        justify-content: space-between; 
+        /*align-items: center;*/
+    }
+    .bunk {
+        max-width: 60%; 
+    }
+    .bunk h1 {
+        margin-bottom: 16px;
+        font-size: 100px;
+        line-height: 100px;
+        font-family: "Core Sans E W01 55 Medium";
+    }
+    .bunk p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .video-div {
+        max-width: 40%; 
+        display: inline-grid;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+    .the-trailer-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .CWK {
+        font-size: 70px;
+    }
+    .weight {
+        font-weight: 700;
+    }
+    .map-flex {
+        display: flex;
+        justify-content: center;
+    }
+    #mapflex {
+        margin-top: 160px;
+    }
+    .map-flex img {
+        animation: up-and-down 5s linear infinite;
+    }
+    .game-info  {
+        padding: 170px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    .Maps-Info {
+        background-image: url(ADVENTURE.png);
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 2.4rem;
+    }
+    .gpaerfixer {
+        gap: 15rem;
+    }
+    #myflexerdiv {
+        gap: 34rem;
+    }
+}
+@media (min-width: 1366px) {
+    img {
+        width: 30%;
+    }
+    .move {
+        width: 35%;
+        transition: 2s;
+    }
+    .for-video-by-centre {
+        height: 600px;
+    }
+    #Maps-infos {
+        display: inline-grid;
+    }
+    #Main-Map {
+        display: block;
+    }
+    .Maps-Info {
+        background-image: url(images/Designsanstitre.jpg);
+        background-size: cover;
+    }
+    .GAMEDOWNLOAD-TITLE {
+        font-size: 2.5rem;
+    }
+    #myflexerdiv {
+        gap: 30rem;
+    }
+}
+@media (min-width: 1400px) {
+    .for-video-by-centre {
+        height: 600px;
+    }
+    #Maps-infos {
+        display: inline-grid;
+    }
+    #Main-Map {
+        display: block;
+    }
+    .Maps-Info {
+        background-image: url(images/Designsanstitre.jpg);
+        background-size: cover;
+    }
+    #myflexerdiv {
+        gap: 45rem;
+    }
+}

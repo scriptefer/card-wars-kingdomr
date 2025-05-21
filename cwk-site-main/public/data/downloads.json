@@ -1,0 +1,17 @@
+{
+    "ios": {
+        "version": "1.0.0",
+        "size": "150MB",
+        "link": ""
+    },
+    "android": {
+        "version": "1.0.0",
+        "size": "150MB",
+        "link": ""
+    },
+    "windows": {
+        "version": "1.0.0",
+        "size": "150MB",
+        "link": ""
+    }
+} 

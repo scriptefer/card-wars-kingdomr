@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Card Wars Kingdom</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: #0f172a;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        .dashboard-container {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .input-field {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+        }
+        .input-field:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.2s ease;
+        }
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .badge-new {
+            background-color: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+        .badge-fix {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        .badge-improvement {
+            background-color: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+        }
+        .badge-feature {
+            background-color: rgba(168, 85, 247, 0.2);
+            color: #a855f7;
+        }
+        .badge-update {
+            background-color: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-900/50 backdrop-blur-lg p-4">
+        <div class="text-center mb-8">
+            <img src="/images/card-wars-kingdom-icon.png" alt="Card Wars Kingdom" class="w-16 h-16 mx-auto mb-4">
+            <h1 class="text-xl font-bold text-white">Admin Panel</h1>
+        </div>
+        <nav class="space-y-2">
+            <a href="#downloads" class="nav-link active flex items-center text-gray-300 px-4 py-3 rounded-lg">
+                <i class="fas fa-download w-6"></i>
+                <span>Downloads</span>
+            </a>
+            <a href="/admin/changelog-management" class="nav-link flex items-center text-gray-300 px-4 py-3 rounded-lg">
+                <i class="fas fa-history w-6"></i>
+                <span>Changelog</span>
+            </a>
+            <a href="/admin/logout" class="nav-link flex items-center text-red-400 px-4 py-3 rounded-lg">
+                <i class="fas fa-sign-out-alt w-6"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+        <!-- Downloads Section -->
+        <div id="downloads" class="dashboard-container rounded-xl p-6 mb-8">
+            <h2 class="text-2xl font-bold text-white mb-6">Manage Downloads</h2>
+            <form id="downloadsForm" class="space-y-6">
+                <!-- iOS/iPad -->
+                <div class="bg-gray-800/50 rounded-lg p-4">
+                    <h3 class="text-lg font-semibold text-white mb-4">iOS/iPad</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-gray-300 mb-2">Version</label>
+                            <input type="text" name="iosVersion" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">File Size</label>
+                            <input type="text" name="iosSize" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Download Link</label>
+                            <input type="url" name="iosLink" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Android -->
+                <div class="bg-gray-800/50 rounded-lg p-4">
+                    <h3 class="text-lg font-semibold text-white mb-4">Android</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-gray-300 mb-2">Version</label>
+                            <input type="text" name="androidVersion" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">File Size</label>
+                            <input type="text" name="androidSize" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Download Link</label>
+                            <input type="url" name="androidLink" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Windows -->
+                <div class="bg-gray-800/50 rounded-lg p-4">
+                    <h3 class="text-lg font-semibold text-white mb-4">Windows</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-gray-300 mb-2">Version</label>
+                            <input type="text" name="windowsVersion" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">File Size</label>
+                            <input type="text" name="windowsSize" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Download Link</label>
+                            <input type="url" name="windowsLink" required
+                                class="input-field w-full px-4 py-2 rounded-lg text-white">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn w-full py-3 px-4 rounded-lg text-white font-semibold">
+                    Update Downloads
+                </button>
+            </form>
+        </div>
+
+        <!-- Changelog Section -->
+        
+    </div>
+
+    <script>
+        const downloadsForm = document.getElementById('downloadsForm');
+        const changelogEntriesDiv = document.getElementById('changelogEntries');
+        const changelogForm = document.getElementById('changelogForm');
+        const changesContainer = document.getElementById('changesContainer');
+        const addChangeButton = document.getElementById('addChange');
+
+        let editingEntryVersion = null;
+
+        // Load existing changelog entries
+        async function loadChangelogEntries() {
+            try {
+                const response = await fetch('/admin/changelog');
+                if (response.ok) {
+                    const entries = await response.json();
+                    changelogEntriesDiv.innerHTML = ''; // Clear existing entries
+                    entries.forEach(entry => {
+                        const entryDiv = document.createElement('div');
+                        entryDiv.className = 'bg-gray-800/50 rounded-lg p-4';
+                        entryDiv.innerHTML = `
+                            <div class="flex justify-between items-center mb-4">
+                                <h4 class="text-lg font-semibold text-white">Version ${entry.version}</h4>
+                                <span class="text-gray-400 text-sm">${new Date(entry.date).toLocaleDateString()}</span>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-300 mb-4">
+                                ${entry.changes.map(change => `<li>${change}</li>`).join('')}
+                            </ul>
+                            <div class="flex gap-4">
+                                <button type="button" class="edit-entry text-blue-400 hover:text-blue-300" data-version="${entry.version}">Edit</button>
+                                <button type="button" class="delete-entry text-red-400 hover:text-red-300" data-version="${entry.version}">Delete</button>
+                            </div>
+                        `;
+                        changelogEntriesDiv.appendChild(entryDiv);
+                    });
+                    // Add event listeners after entries are loaded
+                    changelogEntriesDiv.querySelectorAll('.edit-entry').forEach(button => {
+                        button.addEventListener('click', handleEditClick);
+                    });
+                    changelogEntriesDiv.querySelectorAll('.delete-entry').forEach(button => {
+                        button.addEventListener('click', handleDeleteClick);
+                    });
+                } else {
+                    console.error('Error loading changelog entries:', response.status, response.statusText);
+                    alert('Error loading changelog entries.');
+                }
+            } catch (error) {
+                console.error('Error fetching changelog entries:', error);
+                alert('An error occurred while fetching changelog entries.');
+            }
+        }
+
+        // Handle edit button click
+        async function handleEditClick(e) {
+            const version = e.target.dataset.version;
+            try {
+                const response = await fetch(`/admin/changelog/${version}`);
+                if (response.ok) {
+                    const entry = await response.json();
+                    // Populate the form with entry data
+                    changelogForm.elements['version'].value = entry.version;
+                    changelogForm.elements['date'].value = entry.date; // Populate date field
+                    
+                    // Clear current changes and add existing ones
+                    changesContainer.innerHTML = '';
+                    entry.changes.forEach(change => {
+                        addChangeInput(change); // Use addChangeInput to create change/badge pair
+                    });
+
+                    // Set form to update mode
+                    changelogForm.elements['version'].disabled = true; // Prevent editing version
+                    changelogForm.querySelector('button[type="submit"]').textContent = 'Update Entry';
+                    editingEntryVersion = version; // Store the version being edited
+
+                    // Scroll to form
+                    changelogForm.scrollIntoView({ behavior: 'smooth' });
+
+                } else {
+                    console.error('Error fetching changelog entry for editing:', response.status, response.statusText);
+                    alert('Error loading changelog entry for editing.');
+                }
+            } catch (error) {
+                console.error('Error fetching changelog entry for editing:', error);
+                alert('An error occurred while fetching changelog entry for editing.');
+            }
+        }
+
+        // Handle delete button click
+        async function handleDeleteClick(e) {
+            const version = e.target.dataset.version;
+            if (confirm(`Are you sure you want to delete version ${version}?`)) {
+                try {
+                    const response = await fetch(`/admin/changelog/${version}`, {
+                        method: 'DELETE',
+                    });
+                    if (response.ok) {
+                        alert(`Version ${version} deleted successfully!`);
+                        loadChangelogEntries(); // Reload entries after deletion
+                    } else {
+                        console.error('Error deleting changelog entry:', response.status, response.statusText);
+                        alert('Error deleting changelog entry.');
+                    }
+                } catch (error) {
+                    console.error('Error deleting changelog entry:', error);
+                    alert('An error occurred while deleting changelog entry.');
+                }
+            }
+        }
+
+        // Add change input field (modified to remove badge input)
+        function addChangeInput(value = '') {
+            const changeEntryDiv = document.createElement('div');
+            changeEntryDiv.className = 'change-entry flex gap-4';
+            changeEntryDiv.innerHTML = `
+                <div class="flex-1">
+                    <input type="text" name="changes[]" required
+                        class="input-field w-full px-4 py-2 rounded-lg text-white"
+                        placeholder="Enter change description" value="${value}">
+                </div>
+                <button type="button" class="remove-change text-red-400 hover:text-red-300 px-2">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            changesContainer.appendChild(changeEntryDiv);
+            changeEntryDiv.querySelector('.remove-change').addEventListener('click', () => {
+                changeEntryDiv.remove();
+            });
+        }
+
+        // Event listener for adding change input fields
+        addChangeButton.addEventListener('click', () => addChangeInput());
+
+        // Handle changelog form submission (for adding or updating)
+        changelogForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const version = formData.get('version');
+            const date = formData.get('date'); // Get date from form
+            const changes = formData.getAll('changes[]');
+
+            const method = editingEntryVersion ? 'PUT' : 'POST';
+            const url = editingEntryVersion ? `/admin/changelog/${editingEntryVersion}` : '/admin/changelog';
+
+            const payload = {
+                version: version,
+                date: date, // Include date in payload
+                changes: changes,
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                });
+
+                if (response.ok) {
+                    alert(`Changelog entry ${editingEntryVersion ? 'updated' : 'added'} successfully!`);
+                    // Reset form and reload entries
+                    changelogForm.reset();
+                    changesContainer.innerHTML = ''; // Clear changes
+                    addChangeInput(); // Add one empty change input
+                    changelogForm.elements['version'].disabled = false; // Enable version input
+                    changelogForm.querySelector('button[type="submit"]').textContent = 'Add New Entry';
+                    editingEntryVersion = null;
+                    loadChangelogEntries();
+                } else {
+                     const errorData = await response.json();
+                     console.error(`Error ${editingEntryVersion ? 'updating' : 'adding'} changelog entry:`, response.status, response.statusText, errorData);
+                     alert(`Error ${editingEntryVersion ? 'updating' : 'adding'} changelog entry: ${errorData.message || response.statusText}`);
+                }
+            } catch (error) {
+                console.error(`Error ${editingEntryVersion ? 'updating' : 'adding'} changelog entry:`, error);
+                alert(`An error occurred while ${editingEntryVersion ? 'updating' : 'adding'} changelog entry.`);
+            }
+        });
+
+        // Initial load of changelog entries
+        loadChangelogEntries();
+
+        // Sidebar navigation active state
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                // Add active class to the clicked link
+                this.classList.add('active');
+
+                // Smooth scroll to section
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    e.preventDefault(); // Prevent default anchor link behavior
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+
+            // Set active state on initial load based on URL hash
+            if (window.location.hash && link.getAttribute('href') === window.location.hash) {
+                 document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                 link.classList.add('active');
+                 const targetId = window.location.hash.substring(1);
+                 const targetElement = document.getElementById(targetId);
+                 if (targetElement) {
+                     targetElement.scrollIntoView();
+                 }
+            }
+        });
+
+         // Set initial active state if no hash, default to downloads
+         if (!window.location.hash) {
+             document.querySelector('.nav-link[href="#downloads"]').classList.add('active');
+         }
+
+         // Handle downloads form submission (keep existing logic)
+         document.getElementById('downloadsForm').addEventListener('submit', async (e) => {
+             e.preventDefault();
+             const formData = new FormData(e.target);
+             try {
+                 const response = await fetch('/admin/update-downloads', {
+                     method: 'POST',
+                     headers: {
+                         'Content-Type': 'application/json',
+                     },
+                     body: JSON.stringify(Object.fromEntries(formData)),
+                 });
+                 if (response.ok) {
+                     alert('Downloads updated successfully!');
+                 } else {
+                     alert('Error updating downloads');
+                 }
+             } catch (error) {
+                 console.error('Error updating downloads:', error);
+                 alert('An error occurred while updating downloads.');
+             }
+         });
+
+    </script>
+</body>
+</html> 

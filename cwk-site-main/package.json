@@ -5,8 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "cross-env PORT=4000 nodemon server.js",
-    "dev-custom": "cross-env PORT=3001 nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,14 +17,15 @@
     "chunking-streams": "^0.0.8",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "express-session": "^1.18.1",
     "form-data": "^4.0.0",
     "hasha": "^6.0.0",
+    "multer": "^2.0.0",
     "ngrok": "^5.0.0-beta.2",
     "node-fetch": "^3.3.2",
     "qs": "^6.13.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4",
-    "cross-env": "^7.0.3"
+    "nodemon": "^3.1.4"
   }
 }
