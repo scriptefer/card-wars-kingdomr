@@ -148,7 +148,7 @@ app.post('/admin/login', (req, res) => {
     // Temporary hardcoded credentials
     if (username === 'admin' && password === "Z#4tQ^9mW!vR6$Yp@n2Lc*XbE") {
         req.session.isAuthenticated = true;
-        res.json({ success: true, redirect: '/admin/dashboard' });
+            res.redirect('/admin/dashboard');
     } else {
         res.json({ success: false, error: 'Invalid credentials' });
     }
